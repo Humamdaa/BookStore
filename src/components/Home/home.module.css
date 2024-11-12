@@ -1,0 +1,118 @@
+/* home.module.css */
+
+.home_container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+.text {
+  color: white;
+}
+.white_btn {
+  background-color: white;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.white_btn:hover {
+  background-color: #e0e0e0;
+}
+
+.table_container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.book_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.book_table th,
+.book_table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.book_table th {
+  background-color: #f2f2f2;
+}
+
+.empty_state {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.sameUserRow {
+  background-color: #f17e7e;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action_btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 4px;
+  color: #ce1800;
+}
+
+.action_btn:hover {
+  background-color: #e0e0e0;
+}
+
+.add_book_btn {
+  background-color: #28a745;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add_book_btn:hover {
+  background-color: #218838;
+}
+
+.cornerMessage {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cornerMessage.hidden {
+  opacity: 0;
+}

@@ -1,0 +1,117 @@
+.Register_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f2f5; /* Light background color */
+  font-family: Arial, sans-serif;
+  padding: 20px; /* Add some padding for smaller screens */
+}
+
+.Register_form_container {
+  width: 100%; /* Full width for smaller screens */
+  max-width: 800px; /* Max width for larger screens */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden; /* Ensures child elements stay within border radius */
+}
+
+.left {
+  background-color: #4a90e2; /* Blue background for the left side */
+  color: white;
+  padding: 40px;
+  flex: 1; /* Equal width on larger screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.right {
+  background-color: white; /* White background for right section */
+  flex: 1;
+  padding: 30px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 24px; /* Increase font size for heading */
+}
+
+.white_btn,
+.green_btn {
+  width: 100%; /* Full width buttons */
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.white_btn {
+  background-color: white;
+  border: 1px solid #4a90e2;
+  color: #4a90e2;
+}
+
+.white_btn:hover {
+  background-color: #e6f2ff; /* Light blue on hover */
+}
+
+.green_btn {
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+}
+
+.green_btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* Increase font size for input */
+}
+
+.input:focus {
+  border-color: #4a90e2; /* Highlight border on focus */
+  outline: none;
+}
+
+.error_msg {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 14px; /* Consistent error message size */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .Register_form_container {
+    flex-direction: column; /* Stack left and right sections */
+  }
+
+  .left,
+  .right {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  h1 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .input,
+  .white_btn,
+  .green_btn {
+    font-size: 14px; /* Smaller font size for inputs and buttons */
+  }
+}

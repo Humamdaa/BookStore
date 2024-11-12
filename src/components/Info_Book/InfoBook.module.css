@@ -1,0 +1,44 @@
+.bookDetailContainer {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow around the card */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.bookDetailContainer h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333; /* Dark text for the title */
+}
+
+.bookDetailContainer p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #555; /* Lighter gray for paragraph text */
+}
+
+.bookDetailContainer strong {
+  font-weight: bold;
+  color: #333; /* Dark color for labels */
+}
+
+.navButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
