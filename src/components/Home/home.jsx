@@ -56,6 +56,7 @@ const Home = () => {
     }
   }, [location]);
 
+  
   // Handler for deleting a book
   const handleDelete = async (bookId) => {
     if (window.confirm("Are you sure you want to delete this book?")) {
@@ -63,7 +64,7 @@ const Home = () => {
         const mes = await deleteBook(bookId);
         setMessage(mes.message);
         refetchBooks();
-        setTimeout(() => setMessage(""), 4000); // Hide the message after 7 seconds
+        setTimeout(() => setMessage(""), 4000); 
       } catch (err) {
         setMessage("Failed to delete the book");
         setTimeout(() => setMessage(""), 4000);
@@ -73,7 +74,7 @@ const Home = () => {
 
   const handleEdit = async (bookId) => {
     try {
-      const book = await getInfoBook(bookId); // Fetch book details from the API
+      const book = await getInfoBook(bookId); 
       if (book) {
         navigate(`/edit/book/${bookId}`, { state: { book } });
       } else {

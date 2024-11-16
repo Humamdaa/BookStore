@@ -8,7 +8,30 @@ import AddBook from "./components/Add_book/Add_book";
 import InfoBook from "./components/Info_Book/InfoBook";
 import EditBook from "./components/Edit_book/Edit_book";
 
+import React, { useEffect } from "react";
+import io from "socket.io-client";
+const socket = io("http://localhost:5001"); 
 function App() {
+  // socket :
+  useEffect(() => {
+    socket.on("connect", () => {
+      console.log("Connected to WebSocket server");
+    });
+
+    socket.on("disconnect", () => {
+      console.log("Disconnected from WebSocket server");
+    });
+
+    socket.on("customEvent", (data) => {
+      console.log("Received data from server:", data);
+    });
+    return () => {
+      socket.off("connect");
+      socket.off("disconnect");
+      socket.off("customEvent");
+    };
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
